@@ -61,7 +61,15 @@
   margin-bottom: 1em;
 }
 .hero-section footer {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   width: 100%;
   height: 80px;
   background: linear-gradient(90deg, #2B2956 45.31%, #4D498D 100%);
+  font-family: poppins, sans-serif;
+  color: #fff;
 }/*# sourceMappingURL=main.css.map */
