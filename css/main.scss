@@ -17,13 +17,84 @@
     flex-direction: column;
     justify-content: center;
 
-    img{
+    .svg-two-buddy{
+        z-index: 1;
+        width: 230px;
+        height: 230px;
+        position: absolute;
+        right: calc(50% - 360px);
+        transform: translateY(120px);
+        display: none;
+    }
+
+    .svg-main-buddy{
+        z-index: 1;
+        width: 120px;
+        height: 120px;
+        position: absolute;
+        left: calc(50% - 140px);
+        transform: translateY(-190px);
+        display: block;
+    }
+
+    .svg-white-interesting{
+        z-index: 0;
+        width: 250px;
+        height: 250px;
+        position: absolute;
+        left: calc(50% - 100px);
+        transform: translateY(-210px);
+        display: block;
+    }
+
+    .svg-interrogacao{
+        z-index: 1;
+        width: 70px;
+        height: 70px;
+        position: absolute;
+        left: calc(50% - 140px);
+        transform: translateY(170px);
+        display: block;
+    }
+
+    .svg-darkest-bubble{
+        z-index: 1;
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        right: calc(50% - 120px);
+        transform: translateY(-170px);
+        display: block;
+    }
+
+    .svg-middle-bubble{
+        z-index: 1;
+        width: 70px;
+        height: 70px;
+        position: absolute;
+        left: calc(50% + 50px);
+        transform: translateY(210px);
+        display: block;
+    }
+
+    .svg-light-bubble{
+        z-index: 1;
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        left: calc(50% - 100px);
+        transform: translateY(-200px);
+        display: none;
+    }
+
+    .background{
         position: absolute;
         width: 100%;
         height: 100%;
         background-image: url('../assets/background.jpg');
         object-fit: cover;
         z-index: -99;
+        display: none;
     }
 
     .typo{
@@ -77,5 +148,109 @@
         background: linear-gradient(90deg, #2B2956 45.31%, #4D498D 100%);
         font-family: poppins, sans-serif;
         color: #fff;
+        font-size: 0.9em;
     }
+}
+
+/* MEDIA QUERY */
+
+@media only screen and (min-width: 375px){
+    
+}
+
+@media only screen and (min-width: 425px){
+    .hero-section{
+        .background{
+            display: block;
+        }
+
+        .typo{
+            h1{
+                font-size: 4em;
+            }
+
+            p{
+                font-size: 0.95em;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px){
+    .hero-section{
+
+        .svg-two-buddy{
+            display: block;
+        }
+    
+        .svg-main-buddy{
+            width: 130px;
+            height: 130px;
+            left: calc(50% - 320px);
+            transform: translateY(-160px);
+            display: block;
+        }
+    
+        .svg-white-interesting{
+            z-index: 1;
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            left: calc(50% - 590px);
+            transform: translateY(-40px);
+            display: block;
+        }
+    
+        .svg-interrogacao{
+            width: 100px;
+            height: 100px;
+            left: calc(50% - 270px);
+            transform: translateY(30px);
+            display: block;
+        }
+    
+        .svg-darkest-bubble{
+            width: 100px;
+            height: 100px;
+            right: calc(50% - 260px);
+            transform: translateY(-200px);
+            display: block;
+        }
+    
+        .svg-middle-bubble{
+            width: 80px;
+            height: 80px;
+            left: calc(50% - 340px);
+            transform: translateY(180px);
+            display: block;
+        }
+    
+        .svg-light-bubble{
+            display: block;
+        }
+
+        .typo{
+            h1{
+                font-size: 5em;
+            }
+
+            p{
+                font-size: 1.2em;
+            }
+        }
+
+        .options{
+            button{
+                font-size: 1.1em;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1024px){
+
+}
+
+@media only screen and (min-width: 1440px){
+
 }
