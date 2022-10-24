@@ -21,6 +21,13 @@
         /*display: none;*/
     }
 
+    .white-interesting{
+        position: absolute; 
+        left: calc(50% - 450px);
+        transform: translateY(-140px);
+        display: none;
+    }
+
     .back-icon{
         width: 20px;
         height: 20px;
@@ -30,7 +37,6 @@
     }
     
     .container{
-
         .content{
             padding: 1em;
             font-family: poppins, sans-serif;
@@ -118,6 +124,10 @@
             }
         }
 
+        .white-interesting{
+            display: block;
+        }
+
         .container{
             transform: translate(50px, 50px);
             display: flex;
@@ -141,6 +151,10 @@
             .back-icon{
                 left: calc(50% - 360px);
             }
+        }
+
+        .white-interesting{
+            left: calc(50% - 630px);
         }
     }
 }

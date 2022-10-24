@@ -21,6 +21,12 @@
   z-index: -99;
   /*display: none;*/
 }
+.orientation-section .white-interesting {
+  position: absolute;
+  left: calc(50% - 450px);
+  transform: translateY(-140px);
+  display: none;
+}
 .orientation-section .back-icon {
   width: 20px;
   height: 20px;
@@ -96,6 +102,9 @@
   .orientation-section a .back-icon {
     left: calc(50% - 317px);
   }
+  .orientation-section .white-interesting {
+    display: block;
+  }
   .orientation-section .container {
     transform: translate(50px, 50px);
     display: flex;
@@ -111,6 +120,9 @@
 @media only screen and (min-width: 1024px) {
   .orientation-section a .back-icon {
     left: calc(50% - 360px);
+  }
+  .orientation-section .white-interesting {
+    left: calc(50% - 630px);
   }
 }
 @media only screen and (min-width: 1440px) {

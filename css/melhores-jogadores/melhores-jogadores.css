@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: poppins, sans-serif;
+}
+
+.melhores-jogadores-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow-x: hidden;
+}
+.melhores-jogadores-section .back-icon {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: calc(50% - 142px);
+  transform: translateY(-45px);
+  z-index: 0;
+}
+.melhores-jogadores-section .white-interesting {
+  position: absolute;
+  left: calc(50% - 450px);
+  transform: translateY(-120px);
+  display: none;
+  width: 300px;
+  z-index: -1;
+}
+.melhores-jogadores-section .background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("../assets/background.jpg");
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -99;
+}
+.melhores-jogadores-section .container .best-players {
+  width: 450px;
+  height: 450px;
+  display: none;
+  display: none;
+  -webkit-animation: float 6s infinite;
+          animation: float 6s infinite;
+}
+.melhores-jogadores-section .container .content {
+  padding: 1em;
+}
+.melhores-jogadores-section .container .content .sub-title {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-weight: 400;
+  font-size: 1em;
+}
+.melhores-jogadores-section .container .content h1 {
+  font-size: 2.5em;
+  font-weight: 600;
+  line-height: 0.9;
+  margin-bottom: 0.8em;
+}
+.melhores-jogadores-section .container .content p {
+  margin-bottom: 1em;
+  font-weight: 200;
+  font-size: 1.2em;
+  line-height: 1em;
+  max-width: 500px;
+}
+.melhores-jogadores-section .container .content .rank-table table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 15px;
+  max-width: 500px;
+}
+.melhores-jogadores-section .container .content .rank-table table tr th {
+  font-size: 1.1em;
+  font-weight: 600;
+}
+.melhores-jogadores-section .container .content .rank-table table tr .rank-th {
+  padding-right: 10px;
+}
+.melhores-jogadores-section .container .content .rank-table table tr .pontuacao-th {
+  padding-left: 10px;
+}
+.melhores-jogadores-section .container .content .rank-table table tr .rank1 {
+  border-left: 8px #FFC839 solid;
+}
+.melhores-jogadores-section .container .content .rank-table table tr .rank2 {
+  border-left: 6px #AAAAAA solid;
+}
+.melhores-jogadores-section .container .content .rank-table table tr .rank3 {
+  border-left: 4px #C78344 solid;
+}
+.melhores-jogadores-section .container .content .rank-table table tr td {
+  background-color: rgba(77, 73, 141, 0.12);
+}
+.melhores-jogadores-section footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 80px;
+  background: linear-gradient(90deg, #2B2956 45.31%, #4D498D 100%);
+}
+
+/* RESPONSIVIDADE */
+@media only screen and (min-width: 375px) {
+  .melhores-jogadores-section a .back-icon {
+    left: calc(50% - 170px);
+  }
+}
+@media only screen and (min-width: 768px) {
+  .melhores-jogadores-section a .back-icon {
+    left: calc(50% - 317px);
+  }
+  .melhores-jogadores-section .white-interesting {
+    display: block;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .melhores-jogadores-section a .back-icon {
+    left: calc(50% - 360px);
+  }
+  .melhores-jogadores-section .container {
+    transform: translate(50px, 0px);
+    display: flex;
+  }
+  .melhores-jogadores-section .container .best-players {
+    display: block;
+  }
+  .melhores-jogadores-section .white-interesting {
+    left: calc(50% - 630px);
+    transform: translateY(-120px);
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .melhores-jogadores-section a .back-icon {
+    width: 30px;
+    height: 30px;
+    left: calc(50% - 530px);
+  }
+  .melhores-jogadores-section .container {
+    transform: translate(40px, 10px);
+  }
+  .melhores-jogadores-section .container .content h1 {
+    font-size: 3em;
+    max-width: 500px;
+  }
+  .melhores-jogadores-section .container .content .sub-title {
+    letter-spacing: 0.2em;
+    font-size: 1.1em;
+  }
+  .melhores-jogadores-section .container .content p {
+    font-size: 1.2em;
+  }
+  .melhores-jogadores-section .container .main-image {
+    width: 540px;
+    height: 540px;
+  }
+}
+/* ANIMACOES */
+@-webkit-keyframes float {
+  0% {
+    transform: translateY(-6%);
+  }
+  50% {
+    transform: translateY(-4%);
+  }
+  100% {
+    transform: translateY(-6%);
+  }
+}
+@keyframes float {
+  0% {
+    transform: translateY(-6%);
+  }
+  50% {
+    transform: translateY(-4%);
+  }
+  100% {
+    transform: translateY(-6%);
+  }
+}/*# sourceMappingURL=melhores-jogadores.css.map */
