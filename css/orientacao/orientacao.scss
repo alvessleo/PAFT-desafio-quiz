@@ -10,7 +10,7 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-
+    overflow-x: hidden;
     .background{
         position: absolute;
         width: 100%;
@@ -20,8 +20,17 @@
         z-index: -99;
         /*display: none;*/
     }
+
+    .back-icon{
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        left: calc(50% - 142px);
+        transform: translateY(-45px);
+    }
     
     .container{
+
         .content{
             padding: 1em;
             font-family: poppins, sans-serif;
@@ -37,8 +46,8 @@
                 font-size: 2.5em;
                 font-weight: 600;
                 line-height: 0.9;
-                margin-bottom: 1em;
-
+                margin-bottom: 0.8em;
+                max-width: 290px;
                 span{
                     color: #4D498D;
                 }
@@ -48,24 +57,139 @@
                 margin-bottom: 1em;
                 font-weight: 300;
                 font-size: 1.2em;
+                max-width: 350px;
             }
 
             button{
-                width: 140px;
+                width: 160px;
                 color: #fff;
                 border: none;
                 background-color: #4D498D;
                 height: 30px;
                 font-size: 1.1em;
+                border-radius: 10px;
+                transition: 0.5s;
+
+                &:hover{
+                    background-color: #2c294f;
+                    cursor: pointer;
+                    transform: scale(1.1);
+                }
             }
         }
 
         .main-image{
-            width: 200px;
-            height: 200px;
+            width: 480px;
+            height: 480px;
             display: none;
+            transform: translateY(-40px);
+            animation: float 6s infinite;
         }
+    }
+
+    footer{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 80px;
+        background: linear-gradient(90deg, #2B2956 45.31%, #4D498D 100%);
     }
 }
 
 
+
+/* RESPONSIVIDADE */
+@media only screen and (min-width: 375px){
+    .orientation-section{
+        a{
+            .back-icon{
+                left: calc(50% - 170px);
+                
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 768px){
+    .orientation-section{
+        a{
+            .back-icon{
+                left: calc(50% - 317px);
+            }
+        }
+
+        .container{
+            transform: translate(50px, 50px);
+            display: flex;
+            .content{
+                h1{
+                    font-size: 2.3em;
+                    max-width: 350px;
+                }
+            }
+            .main-image{
+                display: block;
+            }
+        }
+        
+    }
+}
+
+@media only screen and (min-width: 1024px){
+    .orientation-section{
+        a{
+            .back-icon{
+                left: calc(50% - 360px);
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    .orientation-section{
+        a{
+            .back-icon{
+                width: 30px;
+                height: 30px;
+                left: calc(50% - 530px);
+            }
+        }
+
+        .container{
+            transform: translate(40px, 30px);
+            .content{
+                h1{
+                    font-size: 3.5em;
+                    max-width: 410px;
+                }
+                .sub-title{
+                    letter-spacing: 0.20em;
+                    font-size: 1.1em;
+                }
+                p{
+                    font-size: 1.4em;
+                }
+            }
+            .main-image{
+                width: 540px;
+                height: 540px;
+            }
+        }
+    }
+}
+
+/* ANIMATIONS */
+
+@keyframes float{
+    0%{
+        transform: translateY(-9%);
+    }
+
+    50%{
+        transform: translateY(-7%);
+    }
+
+    100%{
+        transform: translateY(-9%);
+    }
+}
