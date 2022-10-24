@@ -1,0 +1,69 @@
+@font-face {
+  font-family: "branchregular";
+  src: url("../../fonts/branch/branch-webfont.woff2") format("woff2"), url("../../fonts/branch/branch-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.pre-game-section .background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("../assets/background.jpg");
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -99;
+}
+.pre-game-section .typo h1 {
+  font-family: "branchregular";
+  font-size: 3.2em;
+  text-align: center;
+}
+.pre-game-section .typo p {
+  font-weight: 100;
+  font-family: poppins, sans-serif;
+  text-align: center;
+  margin-bottom: 2em;
+}
+.pre-game-section .tips {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.pre-game-section .tips .item {
+  font-family: poppins, sans-serif;
+  background-color: #514E92;
+  color: #fff;
+  width: 280px;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.pre-game-section .tips .item .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pre-game-section .tips .item .title img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+.pre-game-section .tips .item .title h2 {
+  font-weight: 300;
+}
+.pre-game-section .tips .item p {
+  font-weight: 500;
+  line-height: 1.5em;
+}
+.pre-game-section .game-start {
+  font-family: poppins, sans-serif;
+}
+.pre-game-section .game-start p {
+  text-align: center;
+}/*# sourceMappingURL=pre-game.css.map */
