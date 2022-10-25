@@ -94,7 +94,6 @@
   -o-object-fit: cover;
      object-fit: cover;
   z-index: -99;
-  display: none;
 }
 .hero-section .typo {
   justify-content: center;

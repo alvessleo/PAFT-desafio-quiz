@@ -17,20 +17,13 @@
 
     .wind{
         position: absolute; 
-        width: 250px;
-        right: calc(50% - 80px);
-        transform: translateY(205px);
+        width: 400px;
+        right: calc(50% - 700px);
+        transform: translateY(105px);
         display: none; 
+        rotate: 50deg;
     }
-
-    .interrogacao{
-        position: absolute; 
-        width: 25px;
-        right: calc(50% - 80px);
-        transform: translateY(130px);
-        display: none;
-    }
-
+    
     .second-buddy{
         position: absolute; 
         width: 80px;
@@ -71,6 +64,7 @@
         justify-content: center;
         align-items: center;
         transform: translateY(-2em);
+
         .question{
             p{
                 text-align: center;
@@ -131,6 +125,12 @@
                     border-radius: 10px;
                     background-color: #D3D3D3;
                     height: 40px;
+                    transition: 0.5s;
+
+                    &:hover{
+                        background-color: #9d9d9d;
+                        cursor: pointer;
+                    }
                 }
             }
         }
@@ -191,6 +191,17 @@
 
 /*  RESPONSIVIDADE */
 
+@media only screen and (min-width: 425px){
+    .perguntas-section{
+        .container{
+            .content{
+                .image-question{
+                    max-width: 300px;
+                }
+            }
+        }
+    }
+}
 
 @media only screen and (min-width: 768px){
     .perguntas-section{
@@ -260,6 +271,60 @@
     }
 }
 
-@media only screen and (min-width: 1024px){
-    
+
+@media only screen and (min-width: 900px){
+    .perguntas-section{
+        .second-buddy{
+            right: calc(50% - 430px);
+            transform: translateY(495px);
+        }
+
+        .interrogacao{
+            right: calc(50% - 80px);
+            transform: translateY(100px);
+        }
+    }
+}
+
+@media only screen and (min-width: 1200px){
+    .perguntas-section{
+        .second-buddy{
+            right: calc(50% - 450px);
+            transform: translateY(570px);
+        }
+        .container{
+            .question{
+                margin-bottom: -1em;
+            }
+
+            .pergunta{
+                margin-bottom: -1em;
+            }
+
+            .timer{
+                width: 65%;
+                max-width: 915px;
+            }
+
+            .content{
+                height: 290px;
+                width: 65%;
+                max-width: 915px;
+                .opcoes{
+                    button{
+                        height: 55px;
+                        font-size: 1.1em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1440px){
+    .perguntas-section{
+        .wind{
+            display: block;
+        }
+    }
 }

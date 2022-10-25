@@ -17,17 +17,11 @@
 }
 .perguntas-section .wind {
   position: absolute;
-  width: 250px;
-  right: calc(50% - 80px);
-  transform: translateY(205px);
+  width: 400px;
+  right: calc(50% - 700px);
+  transform: translateY(105px);
   display: none;
-}
-.perguntas-section .interrogacao {
-  position: absolute;
-  width: 25px;
-  right: calc(50% - 80px);
-  transform: translateY(130px);
-  display: none;
+  rotate: 50deg;
 }
 .perguntas-section .second-buddy {
   position: absolute;
@@ -112,6 +106,11 @@
   border-radius: 10px;
   background-color: #D3D3D3;
   height: 40px;
+  transition: 0.5s;
+}
+.perguntas-section .container .content .opcoes button:hover {
+  background-color: #9d9d9d;
+  cursor: pointer;
 }
 .perguntas-section footer {
   position: absolute;
@@ -163,6 +162,11 @@
 }
 
 /*  RESPONSIVIDADE */
+@media only screen and (min-width: 425px) {
+  .perguntas-section .container .content .image-question {
+    max-width: 300px;
+  }
+}
 @media only screen and (min-width: 768px) {
   .perguntas-section .logo {
     display: block;
@@ -214,5 +218,45 @@
   .perguntas-section footer .buttons .next-btn {
     min-width: 200px;
     height: 30px;
+  }
+}
+@media only screen and (min-width: 900px) {
+  .perguntas-section .second-buddy {
+    right: calc(50% - 430px);
+    transform: translateY(495px);
+  }
+  .perguntas-section .interrogacao {
+    right: calc(50% - 80px);
+    transform: translateY(100px);
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .perguntas-section .second-buddy {
+    right: calc(50% - 450px);
+    transform: translateY(570px);
+  }
+  .perguntas-section .container .question {
+    margin-bottom: -1em;
+  }
+  .perguntas-section .container .pergunta {
+    margin-bottom: -1em;
+  }
+  .perguntas-section .container .timer {
+    width: 65%;
+    max-width: 915px;
+  }
+  .perguntas-section .container .content {
+    height: 290px;
+    width: 65%;
+    max-width: 915px;
+  }
+  .perguntas-section .container .content .opcoes button {
+    height: 55px;
+    font-size: 1.1em;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .perguntas-section .wind {
+    display: block;
   }
 }/*# sourceMappingURL=perguntas.css.map */
