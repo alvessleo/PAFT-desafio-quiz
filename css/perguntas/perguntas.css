@@ -112,6 +112,9 @@
   background-color: #9d9d9d;
   cursor: pointer;
 }
+.perguntas-section .container .content .opcoes .correct {
+  background-color: green;
+}
 .perguntas-section footer {
   position: absolute;
   bottom: 0;
@@ -218,6 +221,9 @@
   .perguntas-section footer .buttons .next-btn {
     min-width: 200px;
     height: 30px;
+  }
+  .perguntas-section footer .buttons .next-btn:disabled {
+    background-color: red;
   }
 }
 @media only screen and (min-width: 900px) {

@@ -132,6 +132,9 @@
                         cursor: pointer;
                     }
                 }
+                .correct {
+                    background-color: green;
+                }
             }
         }
     }
@@ -265,6 +268,9 @@
                 .next-btn{
                     min-width: 200px;
                     height: 30px;
+                    &:disabled {
+                        background-color: red;
+                    }
                 }
             }
         }
