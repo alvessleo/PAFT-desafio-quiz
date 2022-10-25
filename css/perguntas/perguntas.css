@@ -259,4 +259,7 @@
   .perguntas-section .wind {
     display: block;
   }
+  .perguntas-section .second-buddy {
+    right: calc(50% - 500px);
+  }
 }/*# sourceMappingURL=perguntas.css.map */
