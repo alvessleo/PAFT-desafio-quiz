@@ -15,8 +15,56 @@
      object-fit: cover;
   z-index: -99;
 }
+.perguntas-section .wind {
+  position: absolute;
+  width: 250px;
+  right: calc(50% - 80px);
+  transform: translateY(205px);
+  display: none;
+}
+.perguntas-section .interrogacao {
+  position: absolute;
+  width: 25px;
+  right: calc(50% - 80px);
+  transform: translateY(130px);
+  display: none;
+}
+.perguntas-section .second-buddy {
+  position: absolute;
+  width: 80px;
+  right: calc(50% - 370px);
+  transform: translateY(485px);
+  display: none;
+  z-index: 2;
+}
+.perguntas-section .white-interesting {
+  position: absolute;
+  width: 250px;
+  right: calc(50% - 350px);
+  transform: translateY(70px);
+  display: none;
+}
+.perguntas-section .white-interesting2 {
+  position: absolute;
+  width: 250px;
+  left: calc(50% - 350px);
+  transform: translateY(450px);
+  display: none;
+}
+.perguntas-section .logo {
+  position: absolute;
+  right: calc(50% - 90px);
+  margin-top: 20px;
+  display: none;
+}
 .perguntas-section .container {
   margin: 0em 1em;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(-2em);
 }
 .perguntas-section .container .question p {
   text-align: center;
@@ -26,6 +74,10 @@
   font-weight: 500;
   line-height: 1.4em;
   text-align: center;
+}
+.perguntas-section .container .timer {
+  width: 100%;
+  max-width: 800px;
 }
 .perguntas-section .container .timer p {
   font-size: 1em;
@@ -67,6 +119,14 @@
   width: 100%;
   height: 80px;
   background: linear-gradient(90deg, #2B2956 45.31%, #4D498D 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.perguntas-section footer .buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .perguntas-section footer .buttons .sair-btn {
   background-color: black;
@@ -75,6 +135,14 @@
   width: 40%;
   border: none;
   border-radius: 10px;
+  min-width: 120px;
+  height: 45px;
+  margin-right: 15px;
+  transition: 0.5s;
+}
+.perguntas-section footer .buttons .sair-btn:hover {
+  transform: scale(1.1);
+  cursor: pointer;
 }
 .perguntas-section footer .buttons .next-btn {
   background-color: #fff;
@@ -83,4 +151,68 @@
   width: 40%;
   border: none;
   border-radius: 10px;
+  min-width: 120px;
+  height: 45px;
+  transition: 0.5s;
+}
+.perguntas-section footer .buttons .next-btn:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  background-color: #808080;
+  color: #fff;
+}
+
+/*  RESPONSIVIDADE */
+@media only screen and (min-width: 768px) {
+  .perguntas-section .logo {
+    display: block;
+  }
+  .perguntas-section .interrogacao {
+    display: block;
+  }
+  .perguntas-section .second-buddy {
+    display: block;
+  }
+  .perguntas-section .white-interesting {
+    display: block;
+  }
+  .perguntas-section .white-interesting2 {
+    display: block;
+  }
+  .perguntas-section .container .pergunta {
+    margin-top: 1.5em;
+  }
+  .perguntas-section .container .pergunta #current-question {
+    max-width: 500px;
+    font-size: 1.2em;
+  }
+  .perguntas-section .container .timer {
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+  .perguntas-section .container .timer p {
+    margin-bottom: 0.9em;
+  }
+  .perguntas-section .container .content {
+    display: flex;
+    justify-content: space-between;
+  }
+  .perguntas-section .container .content .image-question {
+    max-width: 49%;
+  }
+  .perguntas-section .container .content .opcoes {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 49%;
+  }
+  .perguntas-section footer .buttons .sair-btn {
+    min-width: 200px;
+    height: 30px;
+  }
+  .perguntas-section footer .buttons .next-btn {
+    min-width: 200px;
+    height: 30px;
+  }
 }/*# sourceMappingURL=perguntas.css.map */
