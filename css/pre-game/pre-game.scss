@@ -12,6 +12,27 @@
 }
 
 .pre-game-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+    height: 100vh;
+
+    .white-interesting{
+        position: absolute; 
+        right: calc(50% - 400px);
+        transform: translateY(30px);
+        display: none;
+    }
+
+    .white-interesting2{
+        width: 300px;
+        position: absolute; 
+        left: calc(50% - 400px);
+        transform: translateY(500px);
+        display: none;
+    }
+
     .background{
         position: absolute;
         width: 100%;
@@ -21,61 +42,228 @@
         z-index: -99;
     }
 
-    .typo{
-        h1{
-            font-family: 'branchregular';
-            font-size: 3.2em;
-            text-align: center;
-        }
-        p{
-            font-weight: 100;
-            font-family: poppins, sans-serif;
-            text-align: center;
-            margin-bottom: 2em;
-        }
+    .purple-line{
+        position: absolute;
+        z-index: -5;
+        height: 150px;
+        width: 100%;
+        background-color: #2B2956;
     }
 
-    .tips{
+    .container{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin-top: 5%;
 
-        .item{
-            font-family: poppins, sans-serif;
-            background-color: #514E92;
-            color: #fff;
-            width: 280px;
-            padding: 10px;
-            border-radius: 10px;
-            margin-bottom: 20px;
+        .typo{
+            h1{
+                font-family: 'branchregular';
+                font-size: 3.2em;
+                text-align: center;
+                margin-bottom: 0.5em;
+            }
+            p{
+                font-weight: 100;
+                font-family: poppins, sans-serif;
+                text-align: center;
+                margin-bottom: 2em;
+            }
+        }
+    
+        .tips{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+    
+            .item{
+                font-family: poppins, sans-serif;
+                background-color: #514E92;
+                color: #fff;
+                width: 280px;
+                padding: 10px;
+                border-radius: 10px;
 
-            .title{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                img{
-                    width: 30px;
-                    height: 30px;
-                    margin-right: 10px;
+    
+                .title{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-bottom: 1em;
+                    img{
+                        width: 30px;
+                        height: 30px;
+                        margin-right: 10px;
+                    }
+    
+                    h2{
+                        font-weight: 300;
+                    }
                 }
-
-                h2{
-                    font-weight: 300;
+    
+                p{
+                    font-weight: 500;
+                    line-height: 1.5em;
                 }
             }
-
+        }
+    
+        .game-start{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: poppins, sans-serif;
             p{
-                font-weight: 500;
-                line-height: 1.5em;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+    
+            input{
+                width: 210px;
+                height: 20px;
+                background-color: #D3D3D3;
+                border: none;
+                padding: 5px 10px;
+                border-radius: 10px;
+                margin-bottom: 20px;
+                font-size: 1em;
+            }
+            button{
+                width: 230px;
+                height: 30px;
+                background-color: #4D498D;
+                border-radius: 10px;
+                border: none;
+                color: #fff;
+                font-size: 1em;
+                transition: 0.5s;
+
+                &:hover{
+                    background-color: #2c294f;
+                    cursor: pointer;
+                    transform: scale(1.1);
+                }
             }
         }
     }
+    
+        
+    footer{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 80px;
+        background: linear-gradient(90deg, #2B2956 45.31%, #4D498D 100%);
+    }
+}
 
-    .game-start{
-        font-family: poppins, sans-serif;
-        p{
-            text-align: center;
+/* RESPONSIVIDADE */
+
+@media only screen and (min-width: 768px){
+    .pre-game-section{
+        .main-buddy{
+            width: 160px;
+            position: absolute; 
+            left: calc(50% - 470px);
+            transform: translateY(370px);
+        }
+
+        .wind{
+            width: 400px;
+            position: absolute; 
+            right: calc(50% - 550px);
+            transform: translateY(450px);
+            z-index: -1;
+        }
+
+        .interrogacao{
+            width: 80px;
+            position: absolute; 
+            right: calc(50% - 400px);
+            transform: translateY(400px);
+
+        }
+
+        .white-interesting{
+            display: block;
+            z-index: -1;
+        }
+
+        .white-interesting2{
+            display: block;
+            z-index: -1;
+        }
+
+        .container{
+            .typo{
+                h1{
+                    font-size: 4em;
+                }
+            }
+
+            .tips{
+                display: flex;
+                flex-direction: row;
+
+                .itemone{
+                    margin-right: 30px;
+                }
+
+                .item{
+                    padding: 30px;
+                    margin-bottom: 40px;
+                }
+
+                .purple-line{
+                    height: 100px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1024px){
+    .pre-game-section{
+        .white-interesting{
+            right: calc(50% - 500px);;
+        }
+
+        .container{
+            .typo{
+                h1{
+                    font-size: 4.5em;
+                }
+                p{
+                    font-size: 1.1em;
+                }
+            }
+
+            .tips{
+                .item{
+                    width: 320px;
+                    height: 140px;
+                }
+            }
+
+            .game-start{
+                p{
+                    font-size: 1.2em;
+                }
+
+                input{
+                    width: 230px;
+                    height: 25px;
+                    padding: 5px 20px;
+                }
+
+                button{
+                    width: 270px;
+                    height: 35px;
+                }
+            }
         }
     }
 }
