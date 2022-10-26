@@ -132,12 +132,24 @@
                         background-color: #9d9d9d;
                         cursor: pointer;
                     }
+
+                    /*&:disabled {
+                        background-color: #2B2956;
+                    } */
                 }
                 .correct {
                     background-color: green;
 
                     &:hover{
                         background-color: green;
+                    }
+                }
+
+                .wrong {
+                    background-color: red;
+
+                    &:hover{
+                        background-color: red;
                     }
                 }
             }

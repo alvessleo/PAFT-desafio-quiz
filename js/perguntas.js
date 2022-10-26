@@ -41,19 +41,30 @@ button_next_question.disabled = true
 let current_question = Math.floor(Math.random() * 5);
 
 // Variável para não repetir perguntas
-const perguntas_respondidas = []
+let perguntas_respondidas = []
+
+
+let correta = 0
 
 let c = 0
-
 for (let opt of options) {
     opt.addEventListener("click", () => {
+        for (let opt of options) {
+            opt.disabled = true
+            if (opt.innerHTML === questions[current_question].right_option) {
+                correta = opt
+            }
+        }
         button_next_question.disabled = false;
         console.log("button_next_question.disabled: ",button_next_question.disabled)
         if (opt.innerHTML === questions[current_question].right_option){
             opt.classList.add("correct")
             console.log("ACERTOU");
         } else {
+            opt.classList.add("wrong")
+            correta.classList.add("correct")
            console.log("ERROU");
+           console.log("Correta: ", correta)
         }
     })
     c++
@@ -64,20 +75,36 @@ window.onload = nextQuestion()
 button_next_question.addEventListener("click", nextQuestion)
 
 function nextQuestion(){
-    current_question = Math.floor(Math.random() * 5);
+    if (perguntas_respondidas.length === questions.length) {
+        gameOver()
+    }
+    while (perguntas_respondidas.includes(current_question)) {
+        current_question = Math.floor(Math.random() * 5);
+    }
+
+    perguntas_respondidas.push(current_question)
+    console.log("respondidas: ", perguntas_respondidas)
     console.log("Current question nextQuestion(): ", current_question)
+
     question_image.src = questions[current_question].image;
     question_title.innerHTML = questions[current_question].title;
+
     let c = 0
     for (let opt of options) {
         opt.classList.remove("correct")
+        opt.classList.remove("wrong")
         opt.innerHTML = questions[current_question].options[c]
         c++
+        opt.disabled = false;
     }
     button_next_question.disabled = true
+    
 }
 
 function gameOver() {
+    window.location.href = "../pages/pos_jogo.html";
+    console.log("ACABOU")
+    perguntas_respondidas = [];
 
 }
 

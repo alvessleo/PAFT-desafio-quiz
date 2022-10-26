@@ -109,6 +109,9 @@
   background-color: #D3D3D3;
   height: 40px;
   transition: 0.5s;
+  /*&:disabled {
+      background-color: #2B2956;
+  } */
 }
 .perguntas-section .container .content .opcoes button:hover {
   background-color: #9d9d9d;
@@ -119,6 +122,12 @@
 }
 .perguntas-section .container .content .opcoes .correct:hover {
   background-color: green;
+}
+.perguntas-section .container .content .opcoes .wrong {
+  background-color: red;
+}
+.perguntas-section .container .content .opcoes .wrong:hover {
+  background-color: red;
 }
 .perguntas-section footer {
   position: absolute;
