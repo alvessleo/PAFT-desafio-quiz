@@ -76,6 +76,9 @@
 .pos-jogo-section .container .content .congrats h2 {
   color: #4D498D;
   font-size: 2em;
+  margin-left: 1em;
+  -webkit-animation: pumping 2s infinite;
+          animation: pumping 2s infinite;
 }
 .pos-jogo-section .container .content .congrats p {
   line-height: 1.4em;
@@ -121,6 +124,8 @@
 }
 .pos-jogo-section .container .content .winner-img {
   display: none;
+  -webkit-animation: float 5s infinite;
+          animation: float 5s infinite;
 }
 .pos-jogo-section footer {
   position: absolute;
@@ -131,6 +136,14 @@
 }
 
 /*  RESPONSIVIDADE */
+@media only screen and (min-width: 425px) {
+  .pos-jogo-section .container .content .congrats p {
+    max-width: 400px;
+  }
+  .pos-jogo-section .container .content .congrats .fake-button {
+    max-width: 360px;
+  }
+}
 @media only screen and (min-width: 768px) {
   .pos-jogo-section .logo {
     display: block;
@@ -148,8 +161,81 @@
     display: block;
   }
 }
+@media only screen and (min-width: 900px) {
+  .pos-jogo-section .container .content {
+    display: flex;
+  }
+  .pos-jogo-section .container .content .congrats {
+    margin-right: 40px;
+  }
+  .pos-jogo-section .container .content .winner-img {
+    display: block;
+    width: 400px;
+    height: 400px;
+    transform: translateY(-50px);
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .pos-jogo-section .container .name-pos {
+    transform: translateX(-5%);
+  }
+  .pos-jogo-section .container .name-pos .main-buddy-rotated {
+    width: 100px;
+  }
+  .pos-jogo-section .container .name-pos .name h1 {
+    font-size: 2em;
+  }
+  .pos-jogo-section .container .name-pos .name p {
+    text-align: center;
+  }
+}
 @media only screen and (min-width: 1440px) {
   .pos-jogo-section .wind {
     display: block;
+  }
+}
+/* ANIMACOES */
+@-webkit-keyframes float {
+  0% {
+    transform: translateY(-50px);
+  }
+  50% {
+    transform: translateY(-45px);
+  }
+  100% {
+    transform: translateY(-50px);
+  }
+}
+@keyframes float {
+  0% {
+    transform: translateY(-50px);
+  }
+  50% {
+    transform: translateY(-45px);
+  }
+  100% {
+    transform: translateY(-50px);
+  }
+}
+@-webkit-keyframes pumping {
+  0% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+@keyframes pumping {
+  0% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1.1);
   }
 }/*# sourceMappingURL=pos-jogo.css.map */
