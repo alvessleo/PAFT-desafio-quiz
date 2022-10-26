@@ -94,6 +94,8 @@
   max-width: 100%;
   margin-bottom: 10px;
   border-radius: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .perguntas-section .container .content .opcoes {
   display: flex;
@@ -113,6 +115,9 @@
   cursor: pointer;
 }
 .perguntas-section .container .content .opcoes .correct {
+  background-color: green;
+}
+.perguntas-section .container .content .opcoes .correct:hover {
   background-color: green;
 }
 .perguntas-section footer {
@@ -162,6 +167,9 @@
   cursor: pointer;
   background-color: #808080;
   color: #fff;
+}
+.perguntas-section footer .buttons .next-btn:hover:disabled {
+  transform: scale(1);
 }
 
 /*  RESPONSIVIDADE */

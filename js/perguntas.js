@@ -1,30 +1,30 @@
 // Questões
 const questions = [
 
-    {title: "Thor martelo?",
+    {title: "Qual é o nome do martelo de Thor?",
     image: "../assets/perguntas/MarteloThor.jpg",
-    options: ["Mjolnir","Martelao","H","KK"],
+    options: ["Mjolnir","Vanir","Aesir","Norn"],
     right_option: "Mjolnir"
     },
-    {title: "Pergunta2",
+    {title: "Qual nome falso Natasha usa quando conhece Tony?",
     image: "../assets/perguntas/FalsaNatasha.jpg",
-    options: ["a","b","c","d"],
-    right_option: "a"
+    options: ["Natalie Rushman","Natalia Romanoff","Nicole Rohan","Naya Rabe"],
+    right_option: "Natalie Rushman"
     },
-    {title: "Pergunta3",
+    {title: "Do que é feito o escudo do Capitão América?",
     image: "../assets/perguntas/EscudoCapitao.jpg",
-    options: ["a","b","c","d"],
-    right_option: "b"
+    options: ["Adamantium","Vibranium","Promécio","Carbonádio"],
+    right_option: "Vibranium"
     },
-    {title: "Pergunta4",
+    {title: "Quantas pedras infinitas existem?",
     image: "../assets/perguntas/PedrasInfinitas.png",
-    options: ["a","b","c","d"],
-    right_option: "b"
+    options: ["4","6","5","3"],
+    right_option: "6"
     },
-    {title: "Pergunta5",
+    {title: "Qual desses personagens não é da Marvel?",
     image: "../assets/perguntas/PersonagemDC.jpg",
-    options: ["a","b","c","d"],
-    right_option: "c"
+    options: ["Tocha Humana","Motoqueiro Fantasma","Homem de Ferro","Lanterna Verde"],
+    right_option: "Lanterna Verde"
     }
 
 ]
@@ -47,7 +47,7 @@ let c = 0
 
 for (let opt of options) {
     opt.addEventListener("click", () => {
-        button_next_question.disabled = false
+        button_next_question.disabled = false;
         console.log("button_next_question.disabled: ",button_next_question.disabled)
         if (opt.innerHTML === questions[current_question].right_option){
             opt.classList.add("correct")

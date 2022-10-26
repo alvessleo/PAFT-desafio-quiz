@@ -112,6 +112,7 @@
                 max-width: 100%;
                 margin-bottom: 10px;
                 border-radius: 10px;
+                object-fit: cover;
             }
 
             .opcoes{
@@ -134,6 +135,10 @@
                 }
                 .correct {
                     background-color: green;
+
+                    &:hover{
+                        background-color: green;
+                    }
                 }
             }
         }
@@ -186,6 +191,10 @@
                     cursor: pointer;
                     background-color: #808080;
                     color: #fff;
+                }
+
+                &:hover:disabled{
+                    transform: scale(1);
                 }
             }
         }
