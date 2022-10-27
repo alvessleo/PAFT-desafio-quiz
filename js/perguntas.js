@@ -30,25 +30,24 @@ const questions = [
 ]
 
 let question_count = 0;
-const number_question = document.querySelector("span#number-question");
-number_question.innerHTML = question_count;
 
 // Objetos da tela a serem modificados conforme a questão
+const number_question = document.querySelector("span#number-question");
+number_question.innerHTML = question_count;
+const total_questions = document.querySelector("span#total-questions");
+total_questions.innerHTML = questions.length;
 const question_image = document.querySelector("img#image-question");
 const question_title = document.querySelector("p#current-question");
 const options = document.querySelectorAll("button.button-option");
 const button_quit = document.querySelector("button.sair-btn");
 
+// Recuperar o nome do jogador atual, atraves da URL
+const urlParams = new URLSearchParams(window.location.search);
+const nome = urlParams.get('nome');
+
+// Criação do timer numerico
 const timer = document.querySelector("span#timer");
 let timer_seconds = 16;
-
-const button_next_question = document.querySelector("button.next-btn");
-button_next_question.disabled = true;
-
-// TENTATIVA DE PEGAR O AFTER DA PROGRESS BAR
-/*const progress_bar = window.getComputedStyle(
-    document.querySelector(".base"), "::after"
-).getPropertyValue("max-width");*/
 
 // Variável que vai sortear a próxima pergunta
 let current_question = Math.floor(Math.random() * 5);
@@ -56,10 +55,12 @@ let current_question = Math.floor(Math.random() * 5);
 // Variável para não repetir perguntas
 let perguntas_respondidas = []
 
+// Criação do botão de proxima questão
+const button_next_question = document.querySelector("button.next-btn");
+button_next_question.disabled = true;
 
+let pontuacao = 0
 let correta = 0
-
-let c = 0
 for (let opt of options) {
     opt.addEventListener("click", () => {
         for (let opt of options) {
@@ -69,18 +70,14 @@ for (let opt of options) {
             }
         }
         button_next_question.disabled = false;
-        console.log("button_next_question.disabled: ",button_next_question.disabled)
         if (opt.innerHTML === questions[current_question].right_option){
             opt.classList.add("correct")
-            console.log("ACERTOU");
+            pontuacao += 10
         } else {
             opt.classList.add("wrong")
             correta.classList.add("correct")
-           console.log("ERROU");
-           console.log("Correta: ", correta)
         }
     })
-    c++
 }
 
 window.onload = () => {
@@ -95,6 +92,7 @@ button_next_question.addEventListener("click", () => {
 });
 
 function nextQuestion(){
+    console.log("nome: ", nome)
     if(question_count !== 5){
         question_count++;
     } else{
@@ -102,7 +100,6 @@ function nextQuestion(){
     }
 
     number_question.innerHTML = question_count;
-    console.log(question_count)
     if (perguntas_respondidas.length === questions.length) {
         gameOver()
     }
@@ -111,8 +108,6 @@ function nextQuestion(){
     }
 
     perguntas_respondidas.push(current_question)
-    console.log("respondidas: ", perguntas_respondidas)
-    console.log("Current question nextQuestion(): ", current_question)
 
     question_image.src = questions[current_question].image;
     question_title.innerHTML = questions[current_question].title;
@@ -130,9 +125,9 @@ function nextQuestion(){
 }
 
 function gameOver() {
-    window.location.href = "../pages/pos_jogo.html";
-    console.log("ACABOU")
+    window.location.href = `../pages/pos_jogo.html?nome=${nome}&pontuacao=${pontuacao}`;
     perguntas_respondidas = [];
+    pontuacao = 0
 
 }
 
