@@ -91,6 +91,8 @@
   width: 100%;
   height: 8px;
   max-width: 100%;
+  -webkit-animation: countdown 15s linear;
+          animation: countdown 15s linear;
 }
 .perguntas-section .container .content .image-question {
   max-width: 100%;
@@ -286,5 +288,26 @@
   }
   .perguntas-section .second-buddy {
     right: calc(50% - 500px);
+  }
+}
+/* ANIMACOES */
+@-webkit-keyframes countdown {
+  from {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  to {
+    -webkit-clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+            clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+  }
+}
+@keyframes countdown {
+  from {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  to {
+    -webkit-clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+            clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
   }
 }/*# sourceMappingURL=perguntas.css.map */

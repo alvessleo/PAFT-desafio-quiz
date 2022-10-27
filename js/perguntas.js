@@ -83,11 +83,18 @@ for (let opt of options) {
 window.onload = () => {
     nextQuestion();
     countDown();
+
 }
+
+// Criando div para a animacao da barra de tempo
+const bar = document.createElement("div");
+bar.classList.add("base");
+document.getElementById("timer-animation").appendChild(bar);
 
 button_next_question.addEventListener("click", () => {
     timer.innerHTML = 15;
     timer_seconds = 16;
+    bar.classList.remove("base");   // Removendo a class da animacao
     nextQuestion();
 });
 
@@ -121,7 +128,7 @@ function nextQuestion(){
         opt.disabled = false;
     }
     button_next_question.disabled = true
-    
+    bar.classList.add("base");  // Adicionando novamente a class da barra de animacao
 }
 
 function gameOver() {
