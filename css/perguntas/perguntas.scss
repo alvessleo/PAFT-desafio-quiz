@@ -270,6 +270,8 @@
             .content{
                 display: flex;
                 justify-content: space-between;
+                width: 100%;
+                max-width: 800px;
                 .image-question{
                     max-width: 49%;
                 }
@@ -293,7 +295,8 @@
                     min-width: 200px;
                     height: 30px;
                     &:disabled {
-                        background-color: red;
+                        background-color: rgb(168, 168, 168);
+                        color: #fff;
                     }
                 }
             }
@@ -368,10 +371,13 @@
 @keyframes countdown{
     from{
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-        
+        background-color: rgb(0, 191, 0);
+    }
+    50%{
+        background-color: #FFC700;
     }
     to{
         clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
-
+        background-color: red;
     }
 }
