@@ -80,16 +80,16 @@ for (let opt of options) {
     })
 }
 
+// Criando div para a animacao da barra de tempo
+const bar = document.createElement("div");
+bar.classList.add("base");
+document.getElementById("timer-animation").appendChild(bar);
+
 window.onload = () => {
     nextQuestion();
     countDown();
 
 }
-
-// Criando div para a animacao da barra de tempo
-const bar = document.createElement("div");
-bar.classList.add("base");
-document.getElementById("timer-animation").appendChild(bar);
 
 button_next_question.addEventListener("click", () => {
     timer.innerHTML = 15;
@@ -99,6 +99,7 @@ button_next_question.addEventListener("click", () => {
 });
 
 function nextQuestion(){
+
     console.log("nome: ", nome)
     if(question_count !== 5){
         question_count++;
@@ -118,6 +119,9 @@ function nextQuestion(){
 
     question_image.src = questions[current_question].image;
     question_title.innerHTML = questions[current_question].title;
+
+    let newOrder = questions[current_question].options;
+    shuffle(newOrder);
 
     let c = 0
     for (let opt of options) {
@@ -144,23 +148,34 @@ function countDown(){
     if (timer_seconds > 0) {
 		setTimeout(countDown, 1000);
 	} else if(timer_seconds === 0){
+        bar.classList.remove("base");
         nextQuestion();
         timer.innerHTML = 15;
         timer_seconds = 16;
         countDown();
     }
 
-    // TENTATIVA DE REALIZAR COUNTDOWN PROGRESS BAR
-    /*let animation_bar = setInterval(() => {
-        let progress_width = timer_seconds / 10 * 100;
-
-        if (timer_seconds > 0){
-            progress_bar.style.width = progress_width + "%";
-        } else{
-            clearInterval(animation_bar);
-            progress_bar.style.width = progress_bar = "0%";
-        }
-    }, 1000);*/
-
-
 }
+
+function shuffle(optionsOrdered) {
+    let currentIndex = 4,  randomIndex;
+  
+    // While there remain elements to shuffle.
+    while (currentIndex != 0) {
+  
+      // Pick a remaining element.
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex--;
+  
+      // And swap it with the current element.
+      [optionsOrdered[currentIndex], optionsOrdered[randomIndex]] = [
+        optionsOrdered[randomIndex], optionsOrdered[currentIndex]];
+    }
+  
+    return optionsOrdered;
+  }
+  
+  // Randomizar as opcoes da primeira questao
+  let current_options = questions[current_question].options;
+  shuffle(current_options);
+  console.log(current_options);

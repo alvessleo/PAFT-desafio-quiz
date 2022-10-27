@@ -18,6 +18,18 @@
     overflow-x: hidden;
     height: 100vh;
 
+    .main-buddy{
+        display: none;
+    }
+
+    .wind{
+        display: none;
+    }
+
+    .interrogacao{
+        display: none;
+    }
+
     .white-interesting{
         position: absolute; 
         right: calc(50% - 400px);
@@ -130,6 +142,7 @@
                 border-radius: 10px;
                 margin-bottom: 20px;
                 font-size: 1em;
+                z-index: 999;
             }
             button{
                 width: 230px;
@@ -140,6 +153,7 @@
                 color: #fff;
                 font-size: 1em;
                 transition: 0.5s;
+                z-index: 999;
 
                 &:hover{
                     background-color: #2c294f;
@@ -164,11 +178,13 @@
 
 @media only screen and (min-width: 768px){
     .pre-game-section{
+        overflow-x: hidden;
         .main-buddy{
             width: 160px;
             position: absolute; 
             left: calc(50% - 470px);
             transform: translateY(370px);
+            display: block;
         }
 
         .wind{
@@ -177,6 +193,7 @@
             right: calc(50% - 550px);
             transform: translateY(450px);
             z-index: -1;
+            display: block;
         }
 
         .interrogacao{
@@ -184,7 +201,7 @@
             position: absolute; 
             right: calc(50% - 400px);
             transform: translateY(400px);
-
+            display: block;
         }
 
         .white-interesting{
