@@ -25,9 +25,25 @@ const questions = [
     image: "../assets/perguntas/PersonagemDC.jpg",
     options: ["Tocha Humana","Motoqueiro Fantasma","Homem de Ferro","Lanterna Verde"],
     right_option: "Lanterna Verde"
+    },
+    {title: "Quem o Thanos sacrifica para adquirir a Pedra da Alma?",
+    image: "../assets/perguntas/ThanosGamora.jpg",
+    options: ["Nebulosa","Natasha","Homem de Ferro","Gamora"],
+    right_option: "Gamora"
+    },
+    {title: "O que Thor quer quando está na lanchonete?",
+    image: "../assets/perguntas/ThorCafe.jpg",
+    options: ["Uma fatia de torta","Uma caneca de cerveja","Uma pilha de panquecas","Um copo de café"],
+    right_option: "Um copo de café"
+    },
+    {title: "Antes de se tornar Vision, qual é o nome do mordomo de IA do Homem de Ferro?",
+    image: "../assets/perguntas/Visao.jpg",
+    options: ["HOMER","JARVIS","ALFRED","MARVIN"],
+    right_option: "JARVIS"
     }
-
 ]
+
+
 
 let question_count = 0;
 
@@ -63,7 +79,7 @@ const timer = document.querySelector("span#timer");
 let timer_seconds = 16;
 
 // Variável que vai sortear a próxima pergunta
-let current_question = Math.floor(Math.random() * 5);
+let current_question = Math.floor(Math.random() * 8);
 
 // Variável para não repetir perguntas
 let perguntas_respondidas = []
@@ -114,10 +130,10 @@ button_next_question.addEventListener("click", () => {
 function nextQuestion(){
 
     console.log("nome: ", nome)
-    if(question_count !== 5){
+    if(question_count !== 8){
         question_count++;
     } else{
-        question_count = 5;
+        question_count = 8;
     }
 
     number_question.innerHTML = question_count;
@@ -125,7 +141,7 @@ function nextQuestion(){
         gameOver()
     }
     while (perguntas_respondidas.includes(current_question)) {
-        current_question = Math.floor(Math.random() * 5);
+        current_question = Math.floor(Math.random() * 8);
     }
 
     perguntas_respondidas.push(current_question)
