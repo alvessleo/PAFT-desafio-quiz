@@ -39,7 +39,20 @@ total_questions.innerHTML = questions.length;
 const question_image = document.querySelector("img#image-question");
 const question_title = document.querySelector("p#current-question");
 const options = document.querySelectorAll("button.button-option");
+
 const button_quit = document.querySelector("button.sair-btn");
+// Gerenciando o pop up da pagina
+const pop = document.querySelector("div.pop-up");
+
+button_quit.addEventListener("click", () => {
+    pop.style.display="flex";
+});
+
+const stay_playing = document.querySelector("button#continuar-jogando-popup");
+
+stay_playing.addEventListener("click", () => {
+    pop.style.display="none";
+});
 
 // Recuperar o nome do jogador atual, atraves da URL
 const urlParams = new URLSearchParams(window.location.search);

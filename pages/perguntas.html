@@ -9,6 +9,21 @@
     <link rel="stylesheet" href="https://use.typekit.net/qbj7kce.css">
 </head>
 <body>
+    <!--ESTA DIV A BAIXO É CRIADA QUANDO CLICAR NO BOTAO DE SAIR-->
+    <div class="pop-up">
+        <div class="container">
+            <div class="message">
+                <p class="pop1">Caso você saia, irá perder seu progresso!</p>
+                <img src="../assets/pop-up.svg" class="pop-up-image">
+                <p class="pop2">Tem certeza disso?</p>
+            </div>
+
+            <div class="buttons-pop-up">
+                <button id="sair-btn-popup" onclick="location.href='../index.html'">Sair</button>
+                <button id="continuar-jogando-popup">Continuar jogando</button>
+            </div>
+        </div>
+    </div>
     <section class="perguntas-section">
         <img src="../assets/logo.svg" class="logo">
         <img src="../assets/background.jpg" class="background">
@@ -45,7 +60,7 @@
 
         <footer>
             <div class="buttons">
-                <button class="sair-btn" onclick="location.href='../index.html'">Sair</button>
+                <button class="sair-btn">Sair</button>
                 <button class="next-btn">Proxima questão</button>
             </div>
         </footer>
