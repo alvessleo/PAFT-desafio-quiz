@@ -117,7 +117,6 @@ document.getElementById("timer-animation").appendChild(bar);
 window.onload = () => {
     nextQuestion();
     countDown();
-
 }
 
 button_next_question.addEventListener("click", () => {
@@ -128,8 +127,6 @@ button_next_question.addEventListener("click", () => {
 });
 
 function nextQuestion(){
-
-    console.log("nome: ", nome)
     if(question_count !== 8){
         question_count++;
     } else{
@@ -207,4 +204,3 @@ function shuffle(optionsOrdered) {
   // Randomizar as opcoes da primeira questao
   let current_options = questions[current_question].options;
   shuffle(current_options);
-  console.log(current_options);

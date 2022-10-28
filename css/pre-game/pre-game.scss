@@ -144,7 +144,7 @@
                 font-size: 1em;
                 z-index: 999;
             }
-            button{
+            button, input[type=submit]{
                 width: 230px;
                 height: 30px;
                 background-color: #4D498D;
@@ -276,7 +276,7 @@
                     padding: 5px 20px;
                 }
 
-                button{
+                button, input[type=submit]{
                     width: 270px;
                     height: 35px;
                 }

@@ -40,11 +40,11 @@
                 </div>
             </div>
     
-            <div class="game-start">
+            <form class="game-start" name="game_start" method="_POST">
                 <p>Insira seu nome para iniciar</p>
-                <input id="username" name="username" type="text" placeholder="Ex: Leonardo Alves" required>
-                <button id="game_start">Iniciar quiz</button>
-            </div>
+                <input id="username" name="username" type="text" pattern="[A-Za-z]{1,32}" placeholder="Ex: Leonardo Alves" required>
+                <input id="game_start" type="submit" value="Iniciar quiz">
+            </form>
         </div>
         
 
