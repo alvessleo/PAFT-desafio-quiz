@@ -21,6 +21,10 @@ window.onload = () => {
 
     container_table.innerHTML += `Melhor jogador ${melhor_jogador.nome}. Pontuação ${melhor_jogador.pontuacao}`
 
+    let tr_create = document.createElement("tr");
+    tr_create.setAttribute("id", "primeirolugar");
+
+    document.getElementById("rank").appendChild(tr_create)
 
     let td_posicao_primeiro_lugar = document.createElement("td")
     td_posicao_primeiro_lugar.classList.add("rank1")
@@ -28,22 +32,20 @@ window.onload = () => {
 
     let td_nome_primeiro_lugar = document.createElement("td")
     td_nome_primeiro_lugar.setAttribute("id", "nome-primeiro-lugar")
-    td_nome_primeiro_lugar.textContent = melhor_jogador.nome
+    td_nome_primeiro_lugar.innerHTML = melhor_jogador.nome
 
     let td_pont_primeiro_lugar = document.createElement("td")
     td_pont_primeiro_lugar.setAttribute("id", "pont-primeiro-lugar")
-    td_pont_primeiro_lugar.textContent = melhor_jogador.pontuacao
+    td_pont_primeiro_lugar.innerHTML = melhor_jogador.pontuacao
 
-    tr_primeiro_lugar.appendChild(td_posicao_primeiro_lugar)
-    tr_primeiro_lugar.appendChild(td_pont_primeiro_lugar)
-    tr_primeiro_lugar.appendChild(td_nome_primeiro_lugar)
+    tr_create.appendChild(td_posicao_primeiro_lugar)
+    tr_create.appendChild(td_pont_primeiro_lugar)
+    tr_create.appendChild(td_nome_primeiro_lugar)
 
     console.log(td_posicao_primeiro_lugar)
     console.log(td_pont_primeiro_lugar)
     console.log(td_nome_primeiro_lugar)
 
-    console.log(tr_primeiro_lugar)
+    console.log("console tr primeiro lugar: ", tr_create)
 
-    table.appendChild(tr_primeiro_lugar)
-    
 }
